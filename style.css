@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "fontPage";
+  src: url(assets/fonts/fa-regular-400.woff2), url(assets/fonts/feather.ttf);
+}
+body {
+  font-family: fontPage;
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #e5e1e1; /* Grigio chiaro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.notification-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.pallinoViola {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid 1px white;
+  background-color: rgb(135, 10, 237);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-5px, 2px);
+}
+
+.pallinoVerde {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid 1px white;
+  background-color: rgb(10, 191, 107);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-20px, -2px);
+}
+
+.icon-circle {
+  width: 40px; /* Dimensione dell'icona */
+  height: 40px; /* Dimensione dell'icona */
+  border-radius: 50%; /* Per renderla circolare */
+  background-color: #f8f9fa; /* Colore di sfondo per le icone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #f8f9fa; /* Colore di sfondo del menu a tendina */
+}
+
+#jumbo {
+  background-color: #7550fe;
+}
+#jumbo .backBtn {
+  background-color: #1bcc99;
+  color: white;
+}
+
+.icon-container {
+  background-color: #ffefda;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #ff8a00;
+}
+
+.small-text {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingrandisci {
+  transition: 0.3s;
+}
+
+.ingrandisci:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 6px 1px 9px 2px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.salva {
+  width: 16px;
+  height: 25px;
+  color: black;
+  position: relative;
+}
+
+.empty-icon, .fill-icon {
+  position: absolute;
+  top: 0;
+}
+
+.fill-icon {
+  color: rgba(0, 0, 0, 0);
+  transition: 0.2s;
+}
+
+.fill-icon:hover {
+  transition: 0.5s;
+  color: rgb(0, 0, 0);
+}
+
+.carousel-item {
+  padding: 1rem;
+}
+
+/* Stile per le frecce `prev` e `next` del carosello che sostituiscono quelle standard di bootstrap (per caambiargli stile) */
+.carousel-sx-icona,
+.carousel-dx-icona {
+  background-color: white;
+  color: gray;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#cardBody {
+  background-color: #f5f4f8;
+}
+
+#footerCorsi {
+  background-color: #f5f4f8;
+}
+
+#titleCard {
+  padding-top: 90px;
+}/*# sourceMappingURL=style.css.map */
