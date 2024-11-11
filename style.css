@@ -9,7 +9,7 @@ body {
 .notification-icon {
   width: 32px;
   height: 32px;
-  background-color: #e5e1e1; /* Grigio chiaro */
+  background-color: #e5e1e1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,10 +20,6 @@ body {
 .notification-icon img {
   width: 20px;
   height: 20px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 .pallinoViola {
@@ -51,17 +47,17 @@ body {
 }
 
 .icon-circle {
-  width: 40px; /* Dimensione dell'icona */
-  height: 40px; /* Dimensione dell'icona */
-  border-radius: 50%; /* Per renderla circolare */
-  background-color: #f8f9fa; /* Colore di sfondo per le icone */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .navbar-nav .dropdown-menu {
-  background-color: #f8f9fa; /* Colore di sfondo del menu a tendina */
+  background-color: #f8f9fa;
 }
 
 #jumbo {
@@ -92,19 +88,59 @@ body {
   font-weight: 300;
 }
 
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .ingrandisci {
+  position: relative;
   transition: 0.3s;
+  border-radius: 5px;
+  z-index: 0;
 }
 
-.ingrandisci:hover {
+.ingrandisci:focus {
   transition: 0.5s;
   transform: scale(1.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+.ingrandisci:focus .scheda {
+  transform: rotateY(180deg);
+}
+
+.scheda {
+  width: 100%;
+  height: 453px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+  background-color: white;
+  border: solid 1px rgba(255, 204, 123, 0.288);
+  border-radius: 5px;
+}
+
+.fronte, .retro {
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0.5px;
+}
+.fronte img, .retro img {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.fronte {
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.retro {
+  transform: rotateY(180deg);
   box-shadow: 6px 1px 9px 2px rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+.back-text {
+  min-height: 11rem;
 }
 
 .salva {
@@ -148,6 +184,10 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.carousel-control-next, .carousel-control-prev {
+  z-index: 0 !important;
+}
+
 #cardBody {
   background-color: #f5f4f8;
 }
@@ -158,4 +198,30 @@ body {
 
 #titleCard {
   padding-top: 90px;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.turn {
+  background-color: rgba(255, 239, 218, 0);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.turn .turnIcon {
+  z-index: 10;
+}
+
+.scheda:hover .turn {
+  background-color: #ffefda;
+  color: #c28135;
 }/*# sourceMappingURL=style.css.map */
